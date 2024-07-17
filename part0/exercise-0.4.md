@@ -1,4 +1,4 @@
-A sequence diagram:
+Exercise 0.4: What happens, when we submit a new list entry on the exampleapp page?
 
 ```mermaid
 sequenceDiagram

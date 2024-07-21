@@ -18,6 +18,12 @@ const computeGoodPercentage = (good, neutral, bad) => {
   return (good / total) * 100
 }
 
+const StatisticLine = ({text, value}) => {
+  return(
+    <div>{text}: {value}</div>
+  )
+}
+
 const Statistics = ({good, neutral, bad}) => {
   const total = good + neutral + bad
   if (total === 0) {
@@ -29,12 +35,15 @@ const Statistics = ({good, neutral, bad}) => {
   }
   return(
     <div>
-      good {good} <br/>
-      neutral {neutral} <br/>
-      bad {bad} <br/>
-      all {good + neutral + bad} <br/>
-      average {computeAverage(good, neutral, bad).toPrecision(3)} <br/>
-      positive {computeGoodPercentage(good, neutral, bad).toPrecision(3)} %
+      <StatisticLine text="good" value={good}/>
+      <StatisticLine text="neutral" value={neutral}/>
+      <StatisticLine text="bad" value={bad}/>
+      <StatisticLine text="all" value={total}/>
+      <StatisticLine text="average" value={computeAverage(good, neutral, bad).toPrecision(3)}/>
+      <StatisticLine 
+        text="positive" 
+        value={`${computeGoodPercentage(good, neutral, bad).toPrecision(3)} %`}
+      />
     </div>
   )
 }

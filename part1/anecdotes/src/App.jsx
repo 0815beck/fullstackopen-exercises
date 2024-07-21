@@ -6,6 +6,10 @@ const Button = ({onClick, text}) => {
   )
 }
 
+const indexOfMax = (array) => {
+  return array.reduce((iMax, x, i, array) => x > array[iMax] ? i : iMax, 0)
+}
+
 const App = () => {
   const anecdotes = [
     'If it hurts, do it more often.',
@@ -17,7 +21,7 @@ const App = () => {
     'Programming without an extremely heavy use of console.log is same as if a doctor would refuse to use x-rays or blood tests when diagnosing patients.',
     'The only way to go fast, is to go well.'
   ]
-   
+
   const [selected, setSelected] = useState(0)
   const [votes, setVotes] = useState(anecdotes.map((anecdote) => 0))
 
@@ -39,6 +43,7 @@ const App = () => {
 
   return (
     <>
+      <h1>Anecdote of the day</h1>
       <div>
         {anecdotes[selected]}
       </div>
@@ -48,6 +53,10 @@ const App = () => {
       <div>
         <Button onClick={registerVote} text="vote"/>
         <Button onClick={selectNextAnecdote} text="next anecdote"/>
+      </div>
+      <h1>Anecdote with most votes</h1>
+      <div>
+        {anecdotes[indexOfMax(votes)]}
       </div>
     </>
   )

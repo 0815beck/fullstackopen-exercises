@@ -6,23 +6,27 @@ const Button = (props) => {
   )
 }
 
+//the total shall not be 0!
 const computeAverage = (good, neutral, bad) => {
   const total = good + neutral + bad
-  if (total === 0) {
-    return 0
-  }
   return (good - bad) / total
 }
 
+//the total shall not be 0!
 const computeGoodPercentage = (good, neutral, bad) => {
   const total = good + neutral + bad
-  if (total === 0) {
-    return 100
-  }
   return (good / total) * 100
 }
 
 const Statistics = ({good, neutral, bad}) => {
+  const total = good + neutral + bad
+  if (total === 0) {
+    return (
+      <div>
+        No feedback given
+      </div>
+    )
+  }
   return(
     <div>
       good {good} <br/>

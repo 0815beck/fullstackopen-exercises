@@ -20,7 +20,10 @@ const computeGoodPercentage = (good, neutral, bad) => {
 
 const StatisticLine = ({text, value}) => {
   return(
-    <div>{text}: {value}</div>
+    <tr>
+      <td>{text}</td>
+      <td>{value}</td>
+    </tr>
   )
 }
 
@@ -34,7 +37,8 @@ const Statistics = ({good, neutral, bad}) => {
     )
   }
   return(
-    <div>
+    <table>
+    <tbody>
       <StatisticLine text="good" value={good}/>
       <StatisticLine text="neutral" value={neutral}/>
       <StatisticLine text="bad" value={bad}/>
@@ -44,7 +48,8 @@ const Statistics = ({good, neutral, bad}) => {
         text="positive" 
         value={`${computeGoodPercentage(good, neutral, bad).toPrecision(3)} %`}
       />
-    </div>
+      </tbody>
+    </table>
   )
 }
 

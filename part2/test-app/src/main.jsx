@@ -21,6 +21,4 @@ const notes = [
   }
 ]
 
-console.log(<App notes={notes}/>)
-
 ReactDOM.createRoot(document.getElementById('root')).render(<App notes={notes}/>)

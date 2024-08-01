@@ -1,44 +1,19 @@
 {
   "persons": [
     {
-      "name": "Arto Hellas",
-      "number": "040-123456",
-      "id": "1"
-    },
-    {
       "name": "Ada Lovelace",
       "number": "39-44-5323523",
       "id": "2"
     },
     {
-      "name": "Dan Abramov",
-      "number": "12-43-234345",
-      "id": "3"
+      "id": "ac08",
+      "name": "Angela Beck",
+      "number": "4567876543"
     },
     {
-      "name": "Mary Poppendieck",
-      "number": "39-23-6423122",
-      "id": "4"
-    },
-    {
-      "id": "5687",
+      "id": "94de",
       "name": "Nico Beck",
       "number": "01726016064"
-    },
-    {
-      "id": "726e",
-      "name": "Angela Beck",
-      "number": "8953214514"
-    },
-    {
-      "id": "9eaf",
-      "name": "Nico Schmitt",
-      "number": "4567894281765"
-    },
-    {
-      "id": "7d07",
-      "name": "Annika Nachname",
-      "number": "58352314"
     }
   ]
 }

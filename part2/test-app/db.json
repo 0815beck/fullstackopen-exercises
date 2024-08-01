@@ -1,24 +1,44 @@
 {
-    "notes": [
-      {
-        "id": "1",
-        "content": "HTML is easy",
-        "important": true
-      },
-      {
-        "id": "2",
-        "content": "Browser can execute only JavaScript",
-        "important": false
-      },
-      {
-        "id": "3",
-        "content": "GET and POST are the most important methods of HTTP protocol",
-        "important": true
-      },
-      {
-        "id": "4",
-        "content": "Hallo, das ist ein Test",
-        "important": true
-      }
-    ]
-  }
+  "notes": [
+    {
+      "id": "1",
+      "content": "HTML is easy",
+      "important": true
+    },
+    {
+      "id": "2",
+      "content": "Browser can execute only JavaScript",
+      "important": false
+    },
+    {
+      "id": "3",
+      "content": "GET and POST are the most important methods of HTTP protocol",
+      "important": false
+    },
+    {
+      "id": "4",
+      "content": "Hallo, das ist ein Test",
+      "important": false
+    },
+    {
+      "id": "51a6",
+      "content": "Was geht?",
+      "important": false
+    },
+    {
+      "id": "5c94",
+      "content": "Neue Notiz",
+      "important": false
+    },
+    {
+      "id": "8b03",
+      "content": "Funktioniert anscheinend noch",
+      "important": false
+    },
+    {
+      "id": "43b3",
+      "content": "Was ist denn das alles hier",
+      "important": false
+    }
+  ]
+}

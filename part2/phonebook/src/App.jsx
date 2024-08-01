@@ -22,7 +22,7 @@ const App = () => {
       })
   }, [])
 
-//event handling functions  
+  
   const personsToShow = 
     persons.filter(person => person.name.toLowerCase().includes(filter.toLowerCase()))
 
@@ -32,21 +32,25 @@ const App = () => {
   
   const addPerson = (event) => {
     event.preventDefault()
-    //First check if a person of that name is already in the phonebook
+//First check if a person of that name is already in the phonebook
     let exists = persons.reduce((answer, person) => person.name === newName ? true : false, false)
     if (exists) {
       alert(`${newName} is already added to the phonebook`)
       return
     }
-    //if not, add a new entry to the persons array
+//if not, use POST to send a new entry to the server
+//and update the local persons array
     const personObj = {
       name: newName,
       number: newNumber,
-      id: persons.length + 1
     }
-    setPersons(persons.concat(personObj))
-    setNewName('')
-    setNewNumber('')
+    axios
+      .post('http://localhost:3001/persons', personObj)
+      .then(response => {
+        setPersons(persons.concat(response.data))
+        setNewName('')
+        setNewNumber('')
+      })
   }
 
 //application structure

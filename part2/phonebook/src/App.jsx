@@ -3,6 +3,7 @@ import axios from 'axios'
 import Form from './components/Form'
 import Content from './components/Content'
 import Filter from './components/Filter'
+import personService from './services/persons'
 
 const App = () => {
 
@@ -14,11 +15,11 @@ const App = () => {
 
 //request initial value for persons from the json server
   useEffect(() => {
-    axios
-      .get('http://localhost:3001/persons')
-      .then(response => {
-        setPersons(response.data)
-        console.log('got data from server')
+    personService
+      .getAll()
+      .then(returnedPersons => {
+        setPersons(returnedPersons)
+        console.log('got data from the server')
       })
   }, [])
 
@@ -44,10 +45,10 @@ const App = () => {
       name: newName,
       number: newNumber,
     }
-    axios
-      .post('http://localhost:3001/persons', personObj)
-      .then(response => {
-        setPersons(persons.concat(response.data))
+    personService
+      .create(personObj)
+      .then(returnedObj => {
+        setPersons(persons.concat(returnedObj))
         setNewName('')
         setNewNumber('')
       })

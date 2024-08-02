@@ -3,7 +3,7 @@
     {
       "id": "1",
       "content": "HTML is easy",
-      "important": true
+      "important": false
     },
     {
       "id": "2",
@@ -33,12 +33,17 @@
     {
       "id": "8b03",
       "content": "Funktioniert anscheinend noch",
-      "important": false
+      "important": true
     },
     {
       "id": "43b3",
       "content": "Was ist denn das alles hier",
       "important": false
+    },
+    {
+      "id": "5b60",
+      "content": "Was passiert wenn ich eine ganz lange Notiz hinzufüge? Ich schreibe hier einfach ein paar Sätze um mir anzuschauen, wie es dann aussehen wird. Ich war heute nicht ganz so fleißig, wie ich mir eigentlich vorgenommen hab, aber es könnte auc schlechter sein",
+      "important": true
     }
   ]
 }
